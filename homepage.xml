@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="213dp"
+        android:layout_height="37dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="ANDON System"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.012" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_dept"
+        android:layout_width="150dp"
+        android:layout_height="262dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.417">
+
+        <RadioButton
+            android:id="@+id/rb_quality"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:checked="true"
+            android:onClick="checkbutton"
+            android:text="Quality" />
+
+        <RadioButton
+            android:id="@+id/rb_wareh"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:checked="true"
+            android:onClick="checkbutton"
+            android:text="Warehouse" />
+
+        <RadioButton
+            android:id="@+id/rb_Tooling"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:checked="true"
+            android:onClick="checkbutton"
+            android:text="Tooling" />
+
+        <RadioButton
+            android:id="@+id/rb_HSE"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:checked="true"
+            android:onClick="checkbutton"
+            android:text="HSE" />
+
+        <RadioButton
+            android:id="@+id/rb_Plantengg"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:checked="true"
+            android:onClick="checkbutton"
+            android:text="Plant Engineering" />
+
+        <RadioButton
+            android:id="@+id/rb_methods"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:checked="true"
+            android:onClick="checkbutton"
+            android:text="Methods and Tooling" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radiogroup_locatn"
+        android:layout_width="154dp"
+        android:layout_height="263dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.962"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.419">
+
+        <RadioButton
+            android:id="@+id/rb_White"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:checked="true"
+            android:onClick="checkbutton_loc"
+            android:text="White Steel" />
+
+        <RadioButton
+            android:id="@+id/rb_Black"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:checked="true"
+            android:onClick="checkbutton_loc"
+            android:text="Black Steel" />
+
+        <RadioButton
+            android:id="@+id/rb_Testing"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:checked="true"
+            android:onClick="checkbutton_loc"
+            android:text="Testing" />
+
+        <RadioButton
+            android:id="@+id/rb_FinalA"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:checked="true"
+            android:onClick="checkbutton_loc"
+            android:text="Final Assembly" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="145dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="8dp"
+        android:countDown="true"
+        app:layout_constraintBottom_toTopOf="@+id/btn_help"
+        tools:layout_editor_absoluteX="115dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_help"
+        android:layout_width="103dp"
+        android:layout_height="38dp"
+        android:background="#009688"
+        android:text="Help!"
+        android:textColor="#F7F3F3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_finish"
+        app:layout_constraintHorizontal_bias="0.364"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_dept"
+        app:layout_constraintVertical_bias="0.429" />
+
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_width="103dp"
+        android:layout_height="40dp"
+        android:background="#009688"
+        android:text="Finish"
+        android:textColor="#F7F3F3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup_locatn"
+        app:layout_constraintVertical_bias="0.413" />
+
+    <Button
+        android:id="@+id/btn_emergency"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:background="#009688"
+        android:text="Emergency"
+        android:textColor="#F7F3F3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.956" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="DEPARTMENT"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.128" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="99dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginBottom="8dp"
+        android:text="LOCATION"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.884"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.128" />
+</android.support.constraint.ConstraintLayout>
